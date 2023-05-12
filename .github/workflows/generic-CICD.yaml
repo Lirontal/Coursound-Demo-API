@@ -28,7 +28,7 @@ jobs:
         id: tests
         if: ${{ github.event.inputs.environment == 'dev' }}
         run: |
-          python -m unittest discover -s app/tests
+          python -m unittest discover -s app
           echo "::set-output name=tests-passed::${{ job.status }}"
           
       - name: Stop workflow if tests fail
