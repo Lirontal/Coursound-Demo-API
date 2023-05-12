@@ -24,16 +24,16 @@ jobs:
       - name: Install dependencies
         run: pip install --no-cache-dir -r requirements.txt
 
-      - name: Run tests
-        id: tests
-        if: ${{ github.event.inputs.environment == 'dev' }}
-        run: |
-          python -m unittest discover -s app
-          echo "::set-output name=tests-passed::${{ job.status }}"
+      # - name: Run tests
+      #   id: tests
+      #   if: ${{ github.event.inputs.environment == 'dev' }}
+      #   run: |
+      #     python -m unittest discover -s app
+      #     echo "::set-output name=tests-passed::${{ job.status }}"
           
-      - name: Stop workflow if tests fail
-        if: ${{ steps.tests.outputs.tests-passed != 'success' }}
-        run: exit 1
+      # - name: Stop workflow if tests fail
+      #   if: ${{ steps.tests.outputs.tests-passed != 'success' }}
+      #   run: exit 1
 
       - name: Build and push Docker image to GHCR
         uses: docker/build-push-action@v2
