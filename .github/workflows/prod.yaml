@@ -10,5 +10,4 @@ jobs:
   trigger-cicd:
     uses: ./.github/workflows/generic-CICD.yaml
     with:
-      docker_build_context: .
       environment: main
