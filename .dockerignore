@@ -1,0 +1,22 @@
+# Ignore development and deployment files
+.dockerignore
+.git
+.gitignore
+.vscode
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*~
+
+# Ignore local development files
+venv
+__pycache__
+
+# Ignore Docker-specific files
+docker-compose.yml
+
+# Ignore any other unnecessary files or directories
+*.log
+*.env
+*.sqlite

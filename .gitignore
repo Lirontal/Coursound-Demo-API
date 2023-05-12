@@ -1,0 +1,20 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+
+# Logs
+*.log
+logs/
+
+# Local environment variables
+.env
+
+# SQLAlchemy migration files
+migrations/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Virtual environment
+venv/
