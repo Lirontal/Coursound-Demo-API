@@ -10,9 +10,6 @@ on:
 
 jobs:
   build-and-deploy:
-    permissions: 
-      packages: write
-
     runs-on: ubuntu-latest
 
     steps:
